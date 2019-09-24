@@ -21,14 +21,20 @@ module.exports = {
                 use: [
                     'style-loader', 'css-loader', 'less-loader'
                 ]
+            }, {
+                test: /\.css$/,
+                loaders: [
+                    'style-loader', 'css-loader'
+                ]
             }
+
         ]
     },
     resolve: {
         extensions: ['.js', '.jsx']
     },
     plugins: [
-        new HtmlPlugin({ template: './src/index.html' }),
+        new HtmlPlugin({ template: 'index.html' }),
         new Dotenv({
             path: path.resolve(__dirname, '.env'),
             systemvars: true
