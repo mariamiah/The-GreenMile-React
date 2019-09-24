@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Routes from './Routes/index';
 
-class Welcome extends React.Component {
-    render () {
-        return <h1>ello</h1>;
-    }
-}
-ReactDOM.render(<Welcome />, document.getElementById('root'));
+
+ReactDOM.render(<Routes />, document.getElementById('root'));
