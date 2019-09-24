@@ -2,18 +2,16 @@
 /* eslint-disable no-unused-expressions */
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from '../components/Home';
+import Landing from '../components/Landing';
 import About from '../components/About';
 import Error from '../components/Error';
-import Navigation from '../components/Navigation';
 
 const Routes = () => {
     return (
         <BrowserRouter>
             <div>
-                <Navigation />
                 <Switch>
-                    <Route path="/" exact strict component={Home} />
+                    <Route path="/" exact strict component={Landing} />
                     <Route path="/about" exact strict component={About} />
                     <Route component={Error} />
                 </Switch>
