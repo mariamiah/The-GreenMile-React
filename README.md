@@ -13,7 +13,7 @@
 - [Sass](https://sass-lang.com/)
 - [Redux](https://redux.js.org/)
 
-### View the store manager application on heroku
+### View the green mile application on heroku
 
 
 
