@@ -1,0 +1,10 @@
+{
+    "name": "Green Mile React",
+    "description": "Green mile door to door delivery",
+    "scripts": {},
+    "env": {},
+    "formation": {},
+    "addons": [],
+    "buildpacks": [],
+    "stack": "heroku-18"
+  }

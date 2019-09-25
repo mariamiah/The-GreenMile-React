@@ -3,50 +3,50 @@ const HtmlPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-    devtool: 'inline-source-map',
-    entry: './src/index.js',
-    output: {
-        path: path.join(__dirname, '/dist'),
-        publicPath: '/',
-        filename: 'bundle.js' },
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: ['babel-loader', 'eslint-loader']
-            },
-            {
-                test: /\.less$/,
-                use: [
-                    'style-loader', 'css-loader', 'less-loader'
-                ]
-            }, {
-                test: /\.css$/,
-                loaders: [
-                    'style-loader', 'css-loader'
-                ]
-            }
-
-        ]
+  entry: './src/index.js',
+  output: {
+    path: path.join(__dirname, '/dist'),
+    filename: 'index_bundle.js',
+  },
+  node: {
+    fs: 'empty',
+  },
+  module: {
+    rules: [{
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+      },
     },
-    resolve: {
-        extensions: ['.js', '.jsx']
+    {
+      test: /\.css$/,
+      loaders: [
+        'style-loader', 'css-loader',
+      ],
     },
-    plugins: [
-        new HtmlPlugin({ template: 'index.html' }),
-        new Dotenv({
-            path: path.resolve(__dirname, '.env'),
-            systemvars: true
-        })
-    ],
-    devServer: {
-        historyApiFallback: {
-            disableDotRule: true
-        },
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-        }
-    }
+    {
+      test: /\.scss$/,
+      loaders: ['style-loader', 'css-loader', 'sass-loader'],
+    }],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+  plugins: [
+    new HtmlPlugin({ template: './src/index.html' }),
+    new Dotenv({
+      path: path.resolve(__dirname, '.env'),
+      systemvars: true,
+    }),
+  ],
+  devServer: {
+    historyApiFallback: {
+      disableDotRule: true,
+    },
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+    },
+  },
 };
