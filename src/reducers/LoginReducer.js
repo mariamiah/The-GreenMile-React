@@ -15,7 +15,7 @@ const LoginReducer = (state = initialState, action) => {
         ...state,
         error: action.error,
       };
-
+      print(board)
     default:
       return state;
   }

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
 import store from './Store';
-import Routes from './routes/index';
+import Routes from './Routes/index';
 import './assets/css/style.css';
 
 

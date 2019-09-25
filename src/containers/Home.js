@@ -55,9 +55,9 @@ export class Home extends Component {
       const { access_token } = loginState.user;
       const decoded = jwt.decode(access_token);
       if (decoded.identity.role[0] === 'Admin') {
-        setTimeout(() => window.location.assign('/admindashboard'), 2000);
+        setTimeout(() => window.location.assign('/admindashboard'), 400);
       } else {
-        setTimeout(() => window.location.assign('/loaderDashboard'), 2000);
+        setTimeout(() => window.location.assign('/loaderDashboard'), 400);
       }
     }
   }

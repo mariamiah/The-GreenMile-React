@@ -1,7 +1,7 @@
 {
-  "name": "store-manager-react",
+  "name": "greenmileapp",
   "version": "1.0.0",
-  "description": "Store Manager is a web application that helps store owners manage sales and product inventory records. This application is meant for use in a single store.",
+  "description": "green mile is an app for door to door delivery of packages",
   "main": "index.js",
   "engines": {
     "node": "10.15.1"
@@ -11,7 +11,7 @@
     "test:watch": "jest --watch",
     "test:coverage": " jest --collectCoverage",
     "start": "webpack-dev-server --open --mode development --hot ",
-    "build": "webpack --mode production --open --hot",
+    "build": "webpack --mode production",
     "heroku-postbuild": "npm run build",
     "lint": "eslint  . --ignore-path .gitignore",
     "lint:fix": "eslint . --fix --ignore-path .gitignore"

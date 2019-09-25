@@ -4,7 +4,12 @@
   }
   
   body{
-    background-color: #102B36;
+
+    background-image: url("/src/assets/img/jacob-townsend-BYhxCK7J-_Y-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 1400px 700px;
+    background-position: center;
+    background-attachment: fixed;
   }
   .card-signin {
     border: 0;
@@ -176,3 +181,4 @@ body, html {
   text-align: center;
   color:green;
 }
+

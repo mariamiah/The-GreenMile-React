@@ -24,3 +24,5 @@ export const RegistrationAction = payload => dispatch => fetch(`${BASE_URL}/api/
   })
   .catch(err => err);
 export default RegistrationAction;
+
+
