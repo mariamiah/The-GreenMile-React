@@ -4,25 +4,29 @@
   }
   
   body{
-      background-image: url(https://i.postimg.cc/XqWC1HHL/runner.png);
-      background-color: #102B36;
-      background-repeat: no-repeat;
+    background-color: #102B36;
   }
   .card-signin {
+    border: 0;
     border-radius: 1rem;
-    box-shadow: 2px 2px red;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
   }
-
+  
+  .card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  
   .card-signin .card-body {
-    padding: 4rem;
+    padding: 2rem;
   }
   
   .form-signin {
     width: 100%;
-
   }
   .form-control{
-      width:100%;     
+      width:100%;
   }
   
   .form-signin .btn {
@@ -31,7 +35,7 @@
     letter-spacing: .1rem;
     font-weight: bold;
     padding: 1rem;
-    transition: all 0.2s;   
+    transition: all 0.2s;
   }
   
   .form-label-group {
@@ -46,7 +50,7 @@
   
   .form-label-group>input,
   .form-label-group>label {
-    padding: var(--input-padding-y) var(--input-padding-x);   
+    padding: var(--input-padding-y) var(--input-padding-x);
   }
   
   .form-label-group>label {
@@ -56,10 +60,12 @@
     display: block;
     width: 100%;
     margin-bottom: 0;
+    /* Override default `<label>` margin */
     line-height: 1.5;
     color: #495057;
     border: 1px solid transparent;
-    border-radius: .25rem;   
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
   }
   
   .form-label-group input::-webkit-input-placeholder {
@@ -93,13 +99,18 @@
     font-size: 12px;
     color: #777;
   }
-
+  
+  .btn-google {
+    color: white;
+    background-color: #ea4335;
+  }
   
   .btn-facebook {
     color: white;
     background-color: #3b5998;
   }
  
+
  /* Remove the navbar's default margin-bottom and rounded borders */ 
  .navbar {
   margin-bottom: 0;
@@ -128,8 +139,16 @@ footer {
 #pdtbody{
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.card{
+  display:inline-block!important;
+}
+#signin{
+  width:100%;
+}
 
 *[role="form"] {
+ max-width: 530px;
+ padding: 15px;
  margin: 0 auto;
  border-radius: 0.3em;
  background-color:white;
@@ -150,14 +169,10 @@ body, html {
   margin: 0;
 }
 
-#attendant{
+#loader{
   background-color:white;
 }
 .middle h1{
   text-align: center;
   color:green;
-}
-.row{
-    margin-left:70%;
-    margin-top: 7%;
 }
